@@ -188,16 +188,21 @@ In particular, when adding protocol conformance to a model, prefer adding a sepa
 **Preferred:**
 ```swift
 class MyViewController: UIViewController {
+
   // class stuff here
 }
 
 // MARK: - UITableViewDataSource
+
 extension MyViewController: UITableViewDataSource {
+
   // table view data source methods
 }
 
 // MARK: - UIScrollViewDelegate
+
 extension MyViewController: UIScrollViewDelegate {
+
   // scroll view delegate methods
 }
 ```
@@ -282,6 +287,7 @@ else {
 **Preferred:**
 ```swift
 class TestDatabase: Database {
+
   var data: [String: CGFloat] = ["A": 1.2, "B": 3.2]
 }
 ```
@@ -322,6 +328,7 @@ Here's an example of a well-styled class definition:
 
 ```swift
 class Circle: Shape {
+
   var x: Int, y: Int
   var radius: Double
   var diameter: Double {
@@ -346,9 +353,11 @@ class Circle: Shape {
   override func area() -> Double {
     return Double.pi * radius * radius
   }
+  
 }
 
 extension Circle: CustomStringConvertible {
+
   var description: String {
     return "center = \(centerString) area = \(area())"
   }
@@ -401,10 +410,13 @@ Marking classes or members as `final` in tutorials can distract from the main to
 ```swift
 // Turn any generic type into a reference type using this Box class.
 final class Box<T> {
+
   let value: T
+  
   init(_ value: T) {
     self.value = value
   }
+  
 }
 ```
 
@@ -724,6 +736,7 @@ Use access control as the leading property specifier. The only things that shoul
 private let message = "Great Scott!"
 
 class TimeMachine {  
+
   fileprivate dynamic lazy var fluxCapacitor = FluxCapacitor()
 }
 ```
